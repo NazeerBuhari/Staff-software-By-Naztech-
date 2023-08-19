@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body{
+	margin: 0px;
+	background-color:#fff39a;
+}
+
+header{
+	background:#a88646;
+	color:#ffffcc;
+	padding: 8px 20px 6px 40px;
+	height: 60px;
+}
+
+header h1{
+	display: inline;
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+	font-size: 32px;
+	float: left;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+
+
+nav ul {
+	display: inline;
+	padding: 0px;
+	float: right;
+}
+
+nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	color:#a88646;
+	float: left;
+	margin-left: 12px;
+	
+
+}
+
+nav ul li a{
+	color:#ffffcc;
+	text-decoration: none;	
+}
+
+
+nav ul ul{
+	display: none;
+	position: absolute;
+}
+
+#navli ul li ul:hovar{
+	visibility: visible;
+	display: block;
+}
+
+
+
+
+
+#navli{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.homered{
+	background-color:#fff39a;
+    color:	#a88646;
+	padding: 30px 10px 33px 10px;
+}
+.avatar{
+	width: 200px;
+	height: 70px;
+
+	position:top;
+	top:-40px;
+  left: calc(50% - 50px);
+}
+.divider{
+	background-color:#ffffcc;
+	height: 4px;
+}
+
+.homeblack:hover{
+
+	padding: 30px 10px 32px 10px;
+
+}
+
+table,th,td{
+margin: auto;
+ 
+  width: 100%;
+  font-size:15px;
+	  border-collapse: collapse;
+	  text-align: center;
+	  border:1px solid gray;
+	  font-family: 'Montserrat', sans-serif;
+	  height: 5px;
+	  padding: 40px;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color:white;}
+tr:hover {background-color:wheat;}
+
+th {
+	background-color:#a88646;
+	color: #ffffcc;
+}
+
+
+
+
+
+
+
+
+

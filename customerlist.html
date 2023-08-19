@@ -1,0 +1,87 @@
+<?php 
+require_once ('process/dbh.php');
+
+$sql = "SELECT * FROM employee order by id desc";
+$result = mysqli_query($conn, $sql);
+?>
+
+
+<html>
+<head>
+	<title>Admin Panel</title>
+	<link rel="stylesheet" type="text/css" href="styleemplogin.css">
+	<script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+	
+	<header>
+	
+		<nav>
+		<img src="mudatexlog.png" class="avatar">
+			<ul id="navli">
+				<li><a class="homered" href="aloginwel.php"><b><I>ADMIN DASHBOARD</I></b></a></li>
+				<li><a class="homeblack" href="addemp.php"><b>ADD STAFF</b></a></li>
+				<li><a class="homeblack" href="viewemp.php"><b>VIEW STAFF</b></a></li>
+			
+			
+				<li><a class="homeblack" href="change_password.php"><b>CHANGE PASSWORD</b></a></li>
+				
+				<li><a class="homeblack" href="alogin.html"><b>LOG OUT</b></a></li>
+				
+			</ul>
+			
+		</nav>
+
+	</header>
+
+		<div class="divider">
+</div>
+	<center>
+		<input type="text" style="padding:15px; margin:15px; width:800px; height:0px; border: 1px solid black; border-radius:40px" name="filter" value="" id="filter" placeholder="Search ..." autocomplete="off" />
+	</center>
+	
+    	<table class="table table-reponsive" style="border: 1px  solid black">
+			
+			<tr>
+				<th align = "center">Seq.</th>
+				<th align = "center">Emp. ID</th>
+				<th align = "center">Picture</th>
+				<th align = "center">Name</th>
+				<th align = "center">Employee Status</th>
+				<th align = "center">Branch</th>
+				<th align = "center">dept.</th>
+				<th align = "center">position</th>
+				<th align = "center">Contact</th>
+				
+
+			</tr>
+			
+			<?php
+				$seq = 1;
+				while ($employee = mysqli_fetch_assoc($result)) {
+					echo "<tr>";
+					echo "<td>".$seq."</td>";
+					echo "<td>".$employee['staff_id']."</td>";
+					echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
+					echo "<td>".$employee['firstname']." ".$employee['lastname']."</td>";
+					
+					echo "<td>".$employee['employmentStatus']."</td>";
+					echo "<td>".$employee['branch']."</td>";
+					echo "<td>".$employee['dept']."</td>";
+										echo "<td>".$employee['position']."</td>";
+					echo "<td>".$employee['contact']."</td>";
+					
+					
+					
+					$seq+=1;
+				}
+
+
+			?>
+			
+		</table>
+	</div>
+	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
